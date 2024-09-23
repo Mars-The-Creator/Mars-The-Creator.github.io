@@ -1,0 +1,48 @@
+/* Ensure the body and html take up the full height of the viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Full-page background image container */
+.full-page-image {
+    background-image: url("images/lyric01.jpg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    
+    /* Flexbox to center the text box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the centered text box */
+.centered-text-box {
+    /* Gradient background from red to gold to green */
+    background: linear-gradient(45deg, red, gold, green);
+    
+    /* Black text */
+    color: black;
+    
+    /* Add padding, rounded corners, and thick black border */
+    padding: 20px;
+    font-size: 36px; /* Larger text size */
+    font-family: "Times New Roman", Times, serif; /* Times New Roman font */
+    font-weight: bold; /* Bold text */
+    font-style: italic; /* Italicized text */
+    
+    text-align: center; /* Center the text within the box */
+    border-radius: 10px; /* Rounded corners */
+    
+    /* Add a thick black border */
+    border: 5px solid black;
+    
+    /* Slight shadow for visual effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
