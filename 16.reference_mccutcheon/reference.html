@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurt Cobain Stamp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mango+City&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="image-container" onclick="toggleTextBox()">
+        <div class="background-image"></div>
+        <div class="text-box" id="textBox">
+            "When you're so iconic, even your stamps start a band."
+        </div>
+    </div>
+
+    <script>
+        function toggleTextBox() {
+            var textBox = document.getElementById("textBox");
+            if (textBox.style.display === "block") {
+                textBox.style.display = "none";
+            } else {
+                textBox.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
