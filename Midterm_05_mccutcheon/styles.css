@@ -1,0 +1,48 @@
+/* Ensure the body element covers the entire screen */
+html, body {
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Allow scrolling */
+    font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif"sans-serif;
+}
+
+/* Make sure the background image covers the entire viewport */
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Wrapper to apply gradient stroke effect */
+.text-box-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 100vh; /* Centering and spacing for scrolling */
+    padding: 2px; /* Tighter space for the gradient border */
+    border-radius: 12px; /* Ensure border aligns with text box */
+    background: linear-gradient(1deg, red, yellow, green); /* Gradient stroke */
+    background-clip: padding-box; /* Clip gradient to border */
+    max-width: 620px; /* Constrain wrapper size */
+}
+
+/* The text box */
+.text-box {
+    padding: 16px 24px; /* Adjust padding for tighter fit */
+    background-color: rgba(255, 255, 255, 0); /* Translucent background */
+    border-radius: 10px; /* Slightly smaller radius than wrapper */
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.25); /* Softer shadow */
+    font-size: 1.2rem;
+    word-wrap: break-word;
+    box-sizing: border-box; /* Include padding in box size */
+    max-width: 600px; /* Align with wrapper size */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+
+/* Show the active text box */
+.text-box.active {
+    opacity: 1;
+}
