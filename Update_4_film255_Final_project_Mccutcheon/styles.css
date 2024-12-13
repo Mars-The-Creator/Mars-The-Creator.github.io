@@ -1,0 +1,61 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none; /* Hide videos by default */
+}
+
+.video.active {
+  display: block; /* Only the active video is visible */
+}
+
+/* Text box in the lower third */
+.start-text {
+  position: absolute;
+  bottom: 10%; /* Lower third position */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10; /* Ensures the text appears above the video */
+}
+
+/* Centered text */
+.center-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: white;
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Ensures the text appears above the video */
+    text-align: center;
+}
